@@ -72,10 +72,15 @@ const Game3 = React.memo(({ user }) => {
     }
   };
 
-  const redirect = process.env.REACT_APP_CHAT || 'https://phaserbros.com/join';
+  // const redirect = process.env.REACT_APP_CHAT || 'https://phaserbros.com/join';
+  // const handleSubmit = () => {
+  //   window.open(`${redirect}`, 'chat-window', 'height=900,width=750'); return false;
+  // };
+
   const handleSubmit = () => {
-    window.open(`${redirect}`, 'chat-window', 'height=900,width=750'); return false;
+    window.open('https://phaserbros.com/join', 'chat-window', 'height=900,width=750'); return false;
   };
+
   return (
     <div id="phaser-game">
       <br />

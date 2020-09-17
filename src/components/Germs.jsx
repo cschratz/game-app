@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Phaser from 'phaser';
 import PropTypes from 'prop-types';
 import { ToastContainer, toast } from 'react-toastify';
@@ -13,8 +13,6 @@ import MainGame from '../AvoidTheGerms/Game';
 const { saveScore } = require('../helpers/helpers.js');
 
 const Germs = React.memo(({ user }) => {
-  const [room, setRoom] = useState('');
-
   const descriptionStyle = {
     float: 'right',
     marginTop: '50px',
@@ -35,10 +33,6 @@ const Germs = React.memo(({ user }) => {
     const game = new Phaser.Game(config);
     console.log(game);
   }
-
-  useEffect(() => {
-    setRoom(window.location.href.split('?')[1]);
-  }, []);
 
   const notify = () => toast(`Your Score of ${window.score} Was Submitted!`);
 
@@ -66,9 +60,13 @@ const Germs = React.memo(({ user }) => {
   //   window.open('https://phaserbros.com/join', 'chat-window', 'height=900,width=750'); return false;
   // };
 
-  const handleRedirect = () => {
-    console.log(room);
-    window.open('http://localhost:8080/join', 'new-chat', 'height=900,width=750'); return false;
+  // const redirect = process.env.REACT_APP_CHAT || 'https://phaserbros.com/join';
+  // const handleSubmit = () => {
+  //   window.open(`${redirect}`, 'chat-window', 'height=900,width=750'); return false;
+  // };
+
+  const handleSubmit = () => {
+    window.open('https://phaserbros.com/join', 'chat-window', 'height=900,width=750'); return false;
   };
 
   return (
@@ -93,7 +91,7 @@ const Germs = React.memo(({ user }) => {
           </p>
           <br />
           <br />
-          <Button onClick={handleRedirect} variant="primary">
+          <Button onClick={handleSubmit} variant="primary">
             <h6>Live Game Chat</h6>
           </Button>
           <br />

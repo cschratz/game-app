@@ -75,13 +75,14 @@ const SpaceBlaster = React.memo(({ user }) => {
   };
 
   // const redirect = 'https://phaserbros.com/join';
-  // const handleSubmit = () => {
-  //   window.open('https://phaserbros.com/join', 'chat-window', 'height=900,width=750'); return false;
-  // };
-
-  const handleRedirect = () => {
-    window.open('http://localhost:8080/join', 'new-chat', 'height=900,width=750'); return false;
+  const handleSubmit = () => {
+    window.open('https://phaserbros.com/join', 'chat-window', 'height=900,width=750'); return false;
   };
+
+  // const redirect = process.env.REACT_APP_CHAT || 'https://phaserbros.com/join';
+  // const handleSubmit = () => {
+  //   window.open(`${redirect}`, 'chat-window', 'height=900,width=750'); return false;
+  // };
 
   return (
     <div id="phaser-game">
@@ -110,7 +111,7 @@ const SpaceBlaster = React.memo(({ user }) => {
           </p>
           <br />
           <br />
-          <Button onClick={handleRedirect} variant="danger">
+          <Button onClick={handleSubmit} variant="danger">
             <h6>Live Game Chat</h6>
           </Button>
           <br />

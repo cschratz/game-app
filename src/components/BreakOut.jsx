@@ -61,13 +61,13 @@ const Snake = React.memo(({ user }) => {
   };
 
   // const redirect = 'https://phaserbros.com/join';
-  // const handleSubmit = () => {
-  //   window.open('https://phaserbros.com/join', 'chat-window', 'height=900,width=750'); return false;
-  // };
-
-  const handleRedirect = () => {
-    window.open('http://localhost:8080/join', 'new-chat', 'height=900,width=750'); return false;
+  const handleSubmit = () => {
+    window.open('https://phaserbros.com/join', 'chat-window', 'height=900,width=750'); return false;
   };
+
+  // const handleRedirect = () => {
+  //   window.open('http://localhost:8080/join', 'new-chat', 'height=900,width=750'); return false;
+  // };
 
   return (
     <div id="phaser-game">
@@ -90,7 +90,7 @@ const Snake = React.memo(({ user }) => {
             Mouse: Controls the paddle
           </p>
           <br />
-          <Button onClick={handleRedirect} variant="danger">
+          <Button onClick={handleSubmit} variant="danger">
             <h6>Live Game Chat</h6>
           </Button>
           <br />

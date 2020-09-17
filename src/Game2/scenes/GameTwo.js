@@ -20,7 +20,7 @@ class GameTwo extends Phaser.Scene {
     this.load.image('otherPlayer', enemy);
     this.load.image('star', game);
     this.load.image('synthback', synthback);
-    this.socket = io('http://localhost:8080', { query: `roomName=${this.room}` });
+    this.socket = io('https://www.phaserbros.com', { query: `roomName=${this.room}` });
   }
 
   create() {

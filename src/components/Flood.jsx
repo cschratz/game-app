@@ -61,10 +61,14 @@ const Flood = React.memo(({ user }) => {
     }
   };
 
-  const redirect = process.env.REACT_APP_CHAT || 'https://phaserbros.com/join';
+  // const redirect = process.env.REACT_APP_CHAT || 'https://phaserbros.com/join';
+  // const handleSubmit = () => {
+  //   window.open(`${redirect}`, 'chat-window', 'height=900,width=750'); return false;
+  // };
   const handleSubmit = () => {
-    window.open(`${redirect}`, 'chat-window', 'height=900,width=750'); return false;
+    window.open('https://phaserbros.com/join', 'chat-window', 'height=900,width=750'); return false;
   };
+
   return (
     <div id="phaser-game">
       <br />
@@ -76,7 +80,9 @@ const Flood = React.memo(({ user }) => {
             <br />
             box all one color in 25 moves or less!
             <br />
-            The more moves you have left, the higher your score!
+            The more moves you have left, the higher
+            <br />
+            your score!
           </p>
           <br />
           <br />

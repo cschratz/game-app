@@ -128,7 +128,7 @@ io.on('connection', (socket) => {
   // create a new player and add it to our players object
   const { roomName } = socket.handshake.query;
 
-  if (socket.handshake.headers.referer.split('?')[0] === 'http://localhost:8080/gametwo') {
+  if (socket.handshake.headers.referer.split('?')[0] === 'https://www.phaserbros.com/gametwo') {
     socket.join(roomName);
   }
 
@@ -256,7 +256,7 @@ io.on('connection', (socket) => {
     }
     console.log('user disconnected');
     // remove this player from our players object
-    if (socket.handshake.headers.referer.split('?')[0] === 'http://localhost:8080/gametwo') {
+    if (socket.handshake.headers.referer.split('?')[0] === 'https://www.phaserbros.com/gametwo') {
       const index = players.findIndex((playee) => playee.id === socket.id);
       const scoreIndex = scores.findIndex((score) => score.room === roomName);
       if (index !== -1) {
