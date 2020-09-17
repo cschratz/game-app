@@ -87,7 +87,11 @@ const Game2 = React.memo(({ user }) => {
   //   window.open(`${redirect}`, 'chat-window', 'height=900,width=750'); return false;
   // };
 
-  const handleSubmit = () => {
+  // const handleSubmit = () => {
+  //   window.open('https://phaserbros.com/join', 'chat-window', 'height=900,width=750'); return false;
+  // };
+
+  const handleOpen = () => {
     window.open('https://phaserbros.com/join', 'chat-window', 'height=900,width=750'); return false;
   };
 
@@ -113,7 +117,7 @@ const Game2 = React.memo(({ user }) => {
           </p>
           <br />
           <br />
-          <Button onClick={handleSubmit} variant="primary">
+          <Button onClick={handleOpen} variant="primary">
             <h6>Live Game Chat</h6>
           </Button>
           <br />

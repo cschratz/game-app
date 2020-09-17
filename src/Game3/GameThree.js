@@ -174,7 +174,7 @@ class GameThree extends Phaser.Scene {
       this.scene.start('gameOverScene', { score: this.score });
       this.score = 0;
       this.gameOver = false;
-    }, 1000);
+    }, 500);
   }
 }
 

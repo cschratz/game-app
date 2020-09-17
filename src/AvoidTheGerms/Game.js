@@ -74,6 +74,7 @@ export default class MainGame extends Phaser.Scene {
 
   playerHitPickup(player, pickup) {
     this.score += 10;
+    window.score = this.score;
     window.idGame = 5;
     window.submitted = false;
 

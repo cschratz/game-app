@@ -39,7 +39,7 @@ const Snake = React.memo(({ user }) => {
   const submitScore = () => {
     const scoreObj = {
       idUser: user.idUser,
-      idGame: 1,
+      idGame: 4,
       value: window.score,
     };
     if (window.submitted === false) {
